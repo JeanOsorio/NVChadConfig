@@ -22,7 +22,8 @@ M.plugins = {
       config = function()
          require "custom.null-ls"
       end,
- },
+    },
+    ["github/copilot.vim"] = {},
   },
   override = {
     ["kyazdani42/nvim-tree.lua"] = {
