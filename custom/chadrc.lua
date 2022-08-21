@@ -11,6 +11,12 @@ M.ui = {
 
 M.plugins = {
   user = {
+    ["hrsh7th/nvim-cmp"] = {
+      config = function()
+        require "plugins.configs.cmp"
+        require "custom.cmp"
+      end
+    },
     ["neovim/nvim-lspconfig"] = {
       config = function()
         require "plugins.configs.lspconfig"
@@ -23,7 +29,23 @@ M.plugins = {
          require "custom.null-ls"
       end,
     },
-    ["github/copilot.vim"] = {},
+    -- ["github/copilot.vim"] = {},
+    ["zbirenbaum/copilot.lua"] = {
+      event = {"VimEnter"},
+      config = function()
+        vim.defer_fn(function()
+          require("copilot").setup{
+            cmp = {
+              enabled = true,
+              method = "getCompletionsCycling",
+            }
+          }
+        end, 100)
+      end
+    },
+    ["zbirenbaum/copilot-cmp"] = {
+      module = "copilot_cmp",
+    }
   },
   override = {
     ["kyazdani42/nvim-tree.lua"] = {
