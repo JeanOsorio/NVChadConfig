@@ -6,7 +6,7 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-  theme = "one_light",
+  theme = "chocolate",
 }
 
 M.plugins = {
@@ -71,5 +71,8 @@ M.plugins = {
     }
   }
 }
+
+vim.opt.number = true -- show line number
+vim.opt.relativenumber = true -- show relative number 
 
 return M
