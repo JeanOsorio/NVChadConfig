@@ -8,17 +8,18 @@ end
 local b = null_ls.builtins
 
 local sources = {
-
-   -- webdev stuff
-   b.formatting.deno_fmt,
-   b.formatting.prettier,
-
-   -- Lua
-   b.formatting.stylua,
-
-   -- Shell
-   b.formatting.shfmt,
-   b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+  b.diagnostics.eslint,
+  b.diagnostics.stylelint,
+  b.code_actions.gitsigns,
+  -- webdev stuff
+  b.formatting.deno_fmt,
+  b.formatting.prettier,
+  b.formatting.jq,
+  -- Lua
+  b.formatting.stylua,
+  -- Shell
+  b.formatting.shfmt,
+  b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 }
 
 null_ls.setup {
