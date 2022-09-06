@@ -12,7 +12,7 @@ local sources = {
   b.diagnostics.stylelint,
   b.code_actions.gitsigns,
   -- webdev stuff
-  b.formatting.deno_fmt,
+  -- b.formatting.deno_fmt,
   b.formatting.prettier,
   b.formatting.jq,
   -- Lua

@@ -68,7 +68,14 @@ M.plugins = {
           }
         }
       }
-    }
+    },
+   ["nvim-telescope/telescope.nvim"] = {
+     pickers = {
+       find_files = {
+         hidden = true
+       }
+     }
+   }
   }
 }
 
